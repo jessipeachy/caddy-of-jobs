@@ -13,3 +13,11 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+li.dropdown:hover{
+	ul.dropdown-menu{
+		display:block !important;
+	}
+}
+.positions-table{
+	width: 100%;
+}
