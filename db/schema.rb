@@ -10,7 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719034853) do
+ActiveRecord::Schema.define(version: 20160719040656) do
+
+  create_table "positions", force: :cascade do |t|
+    t.string   "company_name"
+    t.string   "position_name"
+    t.string   "position_description_url"
+    t.string   "company_phone"
+    t.string   "company_address"
+    t.text     "company_email"
+    t.string   "company_contact"
+    t.string   "appication_submitted"
+    t.string   "cover_letter_submitted"
+    t.decimal  "glassdoor_review"
+    t.string   "status"
+    t.date     "date_application_submitted"
+    t.string   "staffing_agency_name"
+    t.string   "staffing_agency_phone"
+    t.string   "staffing_agency_address"
+    t.string   "staffing_agency_contact"
+    t.string   "staffing_agency_fax"
+    t.string   "staffing_agency_notes"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

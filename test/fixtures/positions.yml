@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_name: MyString
+  position_name: MyString
+  position_description_url: MyString
+  company_phone: MyString
+  company_address: MyString
+  company_email: MyText
+  company_contact: MyString
+  appication_submitted: MyString
+  cover_letter_submitted: MyString
+  glassdoor_review: 9.99
+  status: MyString
+  date_application_submitted: 2016-07-19
+  staffing_agency_name: MyString
+  staffing_agency_phone: MyString
+  staffing_agency_address: MyString
+  staffing_agency_contact: MyString
+  staffing_agency_fax: MyString
+  staffing_agency_notes: MyString
+
+two:
+  company_name: MyString
+  position_name: MyString
+  position_description_url: MyString
+  company_phone: MyString
+  company_address: MyString
+  company_email: MyText
+  company_contact: MyString
+  appication_submitted: MyString
+  cover_letter_submitted: MyString
+  glassdoor_review: 9.99
+  status: MyString
+  date_application_submitted: 2016-07-19
+  staffing_agency_name: MyString
+  staffing_agency_phone: MyString
+  staffing_agency_address: MyString
+  staffing_agency_contact: MyString
+  staffing_agency_fax: MyString
+  staffing_agency_notes: MyString

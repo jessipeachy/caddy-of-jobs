@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Positions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Position name</th>
+      <th>Position description url</th>
+      <th>Company phone</th>
+      <th>Company address</th>
+      <th>Company email</th>
+      <th>Company contact</th>
+      <th>Appication submitted</th>
+      <th>Cover letter submitted</th>
+      <th>Glassdoor review</th>
+      <th>Status</th>
+      <th>Date application submitted</th>
+      <th>Staffing agency name</th>
+      <th>Staffing agency phone</th>
+      <th>Staffing agency address</th>
+      <th>Staffing agency contact</th>
+      <th>Staffing agency fax</th>
+      <th>Staffing agency notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @positions.each do |position| %>
+      <tr>
+        <td><%= position.company_name %></td>
+        <td><%= position.position_name %></td>
+        <td><%= position.position_description_url %></td>
+        <td><%= position.company_phone %></td>
+        <td><%= position.company_address %></td>
+        <td><%= position.company_email %></td>
+        <td><%= position.company_contact %></td>
+        <td><%= position.appication_submitted %></td>
+        <td><%= position.cover_letter_submitted %></td>
+        <td><%= position.glassdoor_review %></td>
+        <td><%= position.status %></td>
+        <td><%= position.date_application_submitted %></td>
+        <td><%= position.staffing_agency_name %></td>
+        <td><%= position.staffing_agency_phone %></td>
+        <td><%= position.staffing_agency_address %></td>
+        <td><%= position.staffing_agency_contact %></td>
+        <td><%= position.staffing_agency_fax %></td>
+        <td><%= position.staffing_agency_notes %></td>
+        <td><%= link_to 'Show', position %></td>
+        <td><%= link_to 'Edit', edit_position_path(position) %></td>
+        <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Position', new_position_path %>

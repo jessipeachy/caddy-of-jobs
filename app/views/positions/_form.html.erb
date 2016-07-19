@@ -1,0 +1,107 @@
+<%= form_for(position) do |f| %>
+  <% if position.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(position.errors.count, "error") %> prohibited this position from being saved:</h2>
+
+      <ul>
+      <% position.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :company_name %>
+    <%= f.text_field :company_name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :position_name %>
+    <%= f.text_field :position_name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :position_description_url %>
+    <%= f.text_field :position_description_url %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :company_phone %>
+    <%= f.text_field :company_phone %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :company_address %>
+    <%= f.text_field :company_address %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :company_email %>
+    <%= f.text_area :company_email %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :company_contact %>
+    <%= f.text_field :company_contact %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :appication_submitted %>
+    <%= f.text_field :appication_submitted %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cover_letter_submitted %>
+    <%= f.text_field :cover_letter_submitted %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :glassdoor_review %>
+    <%= f.text_field :glassdoor_review %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :date_application_submitted %>
+    <%= f.date_select :date_application_submitted %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :staffing_agency_name %>
+    <%= f.text_field :staffing_agency_name %>
+  </div>
+
+  <div cclass="form-group">
+    <%= f.label :staffing_agency_phone %>
+    <%= f.text_field :staffing_agency_phone %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :staffing_agency_address %>
+    <%= f.text_field :staffing_agency_address %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :staffing_agency_contact %>
+    <%= f.text_field :staffing_agency_contact %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :staffing_agency_fax %>
+    <%= f.text_field :staffing_agency_fax %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :staffing_agency_notes %>
+    <%= f.text_field :staffing_agency_notes %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit %>
+  </div>
+<% end %>
