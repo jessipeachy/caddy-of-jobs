@@ -4,7 +4,7 @@ class PositionsController < ApplicationController
   # GET /positions
   # GET /positions.json
   def index
-    @positions = Position.all
+    @positions = current_user.positions.all
   end
 
   # GET /positions/1
