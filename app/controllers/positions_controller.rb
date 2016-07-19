@@ -1,6 +1,6 @@
 class PositionsController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_position, only: [:show, :edit, :update, :destroy]
-
   # GET /positions
   # GET /positions.json
   def index
@@ -69,6 +69,19 @@ class PositionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def position_params
-      params.require(:position).permit(:company_name, :position_name, :position_description_url, :company_phone, :company_address, :company_email, :company_contact, :appication_submitted, :cover_letter_submitted, :glassdoor_review, :status, :date_application_submitted, :staffing_agency_name, :staffing_agency_phone, :staffing_agency_address, :staffing_agency_contact, :staffing_agency_fax, :staffing_agency_notes)
+      params.require(:position).permit(:id, :user_id, :company_name, :position_name, :position_description_url, :application_submitted, :cover_letter_submitted, :glassdoor_review, :notes, :date_application_submitted, :response_received, :status, :staffing_agency_name, :staffing_agency_phone, :staffing_agency_url, :staffing_agency_fax, :staffing_agency_address, :staffing_agency_point_of_contact, :staffing_agency_notes, :company_url, :company_phone, :company_address, :company_fax, :company_email_address, :staffing_agency_email_address, :referral_site)
     end
+    before_action :configure_permitted_parameters, if: :devise_controller?
+
+  protected
+
+  def configure_permitted_parameters
+
+    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit({ roles: [] }, :email, :password, :password_confirmation, 
+      :name, :username, :bio, :location, :position) }
+
+    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:email, :password, :password_confirmation, 
+      :current_password, :name, :username, :bio, :location, :position) }
+
+  end
 end
