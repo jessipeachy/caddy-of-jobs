@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>User Id</th>
       <th>Company name</th>
       <th>Position name</th>
       <th>Position description url</th>
@@ -30,6 +31,7 @@
   <tbody>
     <% @positions.each do |position| %>
       <tr>
+        <td><%= position.user_id %></td>
         <td><%= position.company_name %></td>
         <td><%= position.position_name %></td>
         <td><%= position.position_description_url %></td>
