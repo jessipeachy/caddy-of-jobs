@@ -17,10 +17,9 @@
 					<span class="icon-bar"></span> 
 					<span class="icon-bar"></span> 
 				</button>
-				<a class="navbar-brand" href="/welcome/index">Job Caddy</a></div>
+				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
+					<ul class="nav navbar-nav pull-left">
 						<% if user_signed_in? %>
 							<li><%= link_to "Edit Profile", edit_user_registration_path %></li>
 							<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
@@ -28,6 +27,9 @@
 						    <li><%= link_to "Sign Up/In",  new_user_registration_path %></li>
 						    <li><%= link_to "Forgot Password",  new_user_password_path %></li>
 						<% end %>
+					</ul>
+					<div class="logo-holder"><div><a class="navbar-brand" href="/welcome/index"><%= image_tag "jobcaddy-logo-1.png" %></a></div></div>
+					<ul class="nav navbar-nav pull-right">	
 						<li class="dropdown"><a href="/positions">Positions</a>
 							<ul class="dropdown-menu">
 								<li><a href="/positions/new">Add New</li>
